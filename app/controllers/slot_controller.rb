@@ -1,8 +1,7 @@
 class SlotController < ApplicationController
 	def create
-		puts params
-		@return_slot = Slot.create(start_time: params[:start_time], duration: params[:duration])
-		render json: @return_slot
+		@new_slot = Slot.create(start_time: params[:start_time], duration: params[:duration])
+		render json: @new_slot
 	end
 
 	def show
