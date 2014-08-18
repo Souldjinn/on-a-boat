@@ -11,13 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140817192138) do
+ActiveRecord::Schema.define(version: 20140817214120) do
 
-  create_table "timeslots", force: true do |t|
+  create_table "assignments", force: true do |t|
+    t.integer "boat_id"
+    t.integer "slot_id"
+  end
+
+  create_table "boats", force: true do |t|
+    t.integer "capacity"
+    t.string  "name"
+  end
+
+  create_table "slots", force: true do |t|
     t.integer "start_time"
     t.integer "duration"
-    t.integer "availability"
-    t.integer "customer_count"
+    t.integer "availability",   default: 0
+    t.integer "customer_count", default: 0
   end
 
 end
