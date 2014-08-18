@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get "/api/timeslot", to: "slot#show"
 
   post "/api/boat", to: "boat#create"
+  get "/api/boat", to: "boat#show"
+
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
