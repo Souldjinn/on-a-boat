@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  post "/api/timeslot", to: "slot#create"
-  get "/api/timeslot", to: "slot#show"
+  post "/api/timeslots", to: "slot#create"
+  get "/api/timeslots", to: "slot#show"
 
-  post "/api/boat", to: "boat#create"
-  get "/api/boat", to: "boat#show"
+  post "/api/boats", to: "boat#create"
+  get "/api/boats", to: "boat#show"
+
+  post "/api/assignments", to: "assignment#create"
 
 
   # You can have the root of your site routed with "root"
