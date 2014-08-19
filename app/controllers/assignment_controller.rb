@@ -8,7 +8,7 @@ class AssignmentController < ApplicationController
 			render json: "You have requested invalid boat or timeslot"
 		end
 
-		render json: "success"
+		render nothing: true
 	end
 
 

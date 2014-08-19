@@ -29,10 +29,10 @@ ActiveRecord::Schema.define(version: 20140818014053) do
   end
 
   create_table "slots", force: true do |t|
-    t.integer "start_time"
-    t.integer "duration"
-    t.integer "availability",   default: 0
-    t.integer "customer_count", default: 0
+    t.datetime "start_time"
+    t.integer  "duration"
+    t.integer  "availability",   default: 0
+    t.integer  "customer_count", default: 0
   end
 
 end
