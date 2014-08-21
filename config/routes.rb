@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   post "/api/timeslots", to: "slot#create"
   get "/api/timeslots", to: "slot#show"
 
-  post "/api/boats", to: "boat#create"
+  post "/api/boat", to: "boat#create"
   get "/api/boats", to: "boat#show"
 
   post "/api/assignments", to: "assignment#create"
