@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   post "/api/assignments", to: "assignment#create"
 
+  post "/api/bookings", to: "booking#create"
+
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
