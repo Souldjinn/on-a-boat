@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
-  # protect_from_forgery with: :exception
+	before_filter :set_headers
+
 
   def new_availability(slot_id, booking_size)
   	slot = Slot.find(slot_id)
@@ -15,5 +14,10 @@ class ApplicationController < ActionController::Base
 
   end
 
+  private
+
+  def set_headers
+		    headers['Access-Control-Allow-Origin'] = '*'
+  end
 
 end
